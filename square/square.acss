@@ -1,0 +1,8 @@
+.tab{
+  height: 800rpx;
+  color: #ff4e4e;
+}
+
+.tab .cont .item .selectedColor{
+    color: #ff4e4e;
+}

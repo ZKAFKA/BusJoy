@@ -1,0 +1,4 @@
+<view>
+  广场
+  <tabbar class="tab" idx=0 hid={{tabbarHidden}}></tabbar>
+</view>
