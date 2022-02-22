@@ -1,0 +1,11 @@
+<view class="tabBar" hidden={{hid}}>
+    <view class="cont">
+        <block a:for="{{tabBar}}" a:for-item="item" a:key="tabBar">
+            <view class="item" onTap="goToTab" data-url="{{item.pagePath}}" data-index="{{index}}">
+                <image class="ico" src="{{idx == index ? item.selectedIconPath : item.iconPath}}"></image>
+                <view class="{{idx == index ? 'selectedColor' : 'txt'}}">{{item.text}}
+                </view>
+            </view>
+        </block>
+    </view>
+</view>

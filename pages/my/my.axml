@@ -1,0 +1,147 @@
+<view>
+<view class="container">
+    <view class="content">
+      <view class="hd" style="transform:rotateZ({{angle}}deg);">
+          <image class="logo" src="head.jpg"></image>
+          <text class="nickname">Lemon</text>
+          <text class="title">阅读者</text>
+          <view class="card"/>
+          <image class="card-bg" mode="scaleToFill" src="{{cardimage}}"/>  
+      </view>
+
+      <view class="weui-grids">
+        <view onTap="onDiscount" class="weui-grid" hover-class="weui-grid_active">
+          <view class="weui-grid__label1">
+            <text>
+            3                                                                                                  
+            </text>
+          </view>
+          <view class="weui-grid__label2">
+            <text>
+            乘车券                                                                                                  
+            </text>
+          </view>
+        </view>
+        <view onTap="onDiscount" class="weui-grid" hover-class="weui-grid_active">
+          <view class="weui-grid__label1">
+            <text>
+            4                                                                                                 
+            </text>
+          </view>
+          <view class="weui-grid__label2">
+            <text>
+            商户券                                                                                                  
+            </text>
+          </view>
+        </view>
+        <view onTap="onCard" class="weui-grid" hover-class="weui-grid_active">
+          <view class="weui-grid__label1">
+            <text>
+            4                                                                                                            
+            </text>
+          </view>
+          <view class="weui-grid__label2">
+            <text>
+            我的卡片                                                                                                  
+            </text>
+          </view>
+        </view>
+        <view onTap="onGold" class="weui-grid" hover-class="weui-grid_active">
+          <view class="weui-grid__label1">
+            <text>
+            230                                                                                                 
+            </text>
+          </view>
+          <view class="weui-grid__label2">
+            <text>
+            金币                                                                                                  
+            </text>
+          </view>
+        </view>
+      </view>
+
+<!-- 领券选项卡 -->
+      <view class="weui-gridsbreak">
+        <view onTap="categoryTap" class="weui-gridbreak">
+          <tabs
+            tabs="{{tabs}}"
+            tabsName="activeTab"
+            onTabClick="handleTabClick"
+            onChange="handleTabChange"
+            onPlusClick="handlePlusClick"
+            activeTab="{{activeTab}}"
+            showPlus="{{hasPlus}}"
+            swipeable="{{hasContentHeight}}"
+            capsule="{{typeCapsule}}"
+            hasSubTitle="{{typeHasSubTitle}}"
+          >
+            <block a:for="{{tabs}}">
+              <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}">
+                <view class="weui-gridbreakinside">
+                  <image src="bus.jpg" class="swiper-img">
+                    </image>
+                    <image src="bus.jpg" class="swiper-img">
+                    </image>
+                    <image src="bus.jpg" class="swiper-img">
+                    </image>
+                    <image src="bus.jpg" class="swiper-img">
+                    </image>
+                </view>
+              </tab-content>
+            </block>
+          </tabs>
+        </view>
+      </view>
+
+<!-- 功能菜单 -->
+      <view class="weui-gridsgold">
+        <view class="weui-gridgold">
+          <view class="weui-grid__labelgold">
+            <text space=“nbsp”>
+            功能菜单                                                                                                    
+            </text>
+            <text class="menu-note">
+               (每日签到获取金币)                                                                                              
+            </text>
+          </view>
+        </view>
+      </view>
+
+      <view class="weui-gridsgoldcontent">
+        <view onTap="onSignin" class="weui-gridgoldcontent">
+          <image class="weui-grid__icon" src="签到.png" />
+          <view class="weui-grid__label2">
+            <text>
+            签到                                                                                                  
+            </text>
+          </view>
+        </view>
+        <view onTap="onRecord" class="weui-gridgoldcontent">
+          <image class="weui-grid__icon" src="乘车记录.png" />
+          <view class="weui-grid__label2">
+            <text>
+            乘车记录                                                                                                  
+            </text>
+          </view>
+        </view>
+        <view onTap="onRank" class="weui-gridgoldcontent">
+          <image class="weui-grid__icon" src="好友排行.png" />
+          <view class="weui-grid__label2">
+            <text>
+            好友排行                                                                                                  
+            </text>
+          </view>
+        </view>
+        <view onTap="onDiscount" class="weui-gridgoldcontent">
+          <image class="weui-grid__icon" src="更多.png" />
+          <view class="weui-grid__label2">
+            <text>
+            更多                                                                                                  
+            </text>
+          </view>
+        </view>
+      </view>
+    </view>
+</view>
+<tabbar class="tab" idx=2 hid={{tabbarHidden}}></tabbar>
+</view>

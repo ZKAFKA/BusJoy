@@ -1,0 +1,149 @@
+.search{
+  z-index: 8;
+  position: absolute;
+  height: 45rpx;
+  width: 45rpx;
+  top: 25rpx;
+  right: 45rpx;
+}
+
+.camera{
+  z-index: 8;
+  position: absolute;
+  height: 50rpx;
+  width: 50rpx;
+  top: 25rpx;
+  left: 45rpx;
+}
+
+.search-Bar{
+  margin-left: 50rpx;
+  width: 600rpx;
+}
+
+.tab{
+  height: 800rpx;
+  color: #ff4e4e;
+}
+
+.tab .cont .item .selectedColor{
+    color: #ff4e4e;
+}
+
+.blank{
+  height: 300rpx;
+}
+
+/*动态*/
+.card{
+  margin-top: 18rpx;
+  margin-left: 18rpx;
+  width:710rpx;
+  background-color: white;
+  border-radius: 20rpx;
+}
+
+.person{
+  height:145rpx;
+  width: 700rpx;
+}
+
+.person-img{
+  margin: 25rpx;
+  height:100rpx;
+  width:100rpx;
+  border-radius:50%;
+  background:#646464
+}
+
+.person-name{
+  position: absolute;
+  width: 300rpx;
+  margin-left: 0rpx;
+  margin-top: 35rpx;
+  font-size: 10pt;
+  font-weight: bold;
+  color: #363636;
+}
+.person-note{
+  position: absolute;
+  width: 300rpx;
+  margin-left: 0rpx;
+  margin-top: 85rpx;
+  font-size: 7pt;
+  color: #464646af;
+}
+.identify{
+  position: absolute;
+  margin-top: 75rpx;
+  margin-left: 80rpx;
+  height: 35rpx;
+  width: 35rpx;
+}
+
+
+.more{
+  position: absolute;
+  margin-top: 9rpx;
+  margin-left: 490rpx;
+  height: 50rpx;
+  width: 50rpx;
+}
+
+.line{
+  margin-left: 28rpx;
+  height:1px;
+  width: 650rpx;
+  background:rgba(87,107,149,0.1);
+}
+
+.content{
+  margin-top: 15rpx;
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+  font-style:normal;
+  font-size: 10pt;
+  letter-spacing:2rpx;
+  line-height:35rpx;
+  font-family:"Arial","Microsoft YaHei";
+  color: #353535;
+  white-space: pre-wrap;
+
+}
+
+.topic{
+  margin-top: 80rpx;
+  margin-left: 25rpx;
+  padding-left: 12rpx;
+  padding-right: 12rpx;
+  padding-bottom: 7rpx;
+  display: inline-block;
+  background-color: #3ec3f738;
+  border-radius: 30rpx;
+}
+.topic-text{
+  font-size: 8pt;
+}
+
+.menu{
+  height: 50rpx;
+  width: 300rpx;
+  margin-left: 380rpx;
+  padding-bottom: 30rpx;
+}
+
+.mark{
+  margin-top: 10rpx;
+  margin-left: 85rpx;
+  height: 40rpx;
+  width: 40rpx;
+}
+.mark-text{
+  position: absolute;
+  margin-top: 20rpx;
+  margin-left: 10rpx;
+  font-size: 8pt;
+  font-weight: bold;
+  color: #8a8a8a;
+}
+

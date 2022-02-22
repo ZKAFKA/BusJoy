@@ -1,0 +1,10 @@
+{
+  "transparentTitle": "always",
+  "usingComponents": {
+    "value-module": "/components/value-module/value-module",
+    "tabbar":"/components/tabbar/tabbar"
+  },
+  "pullRefresh": true
+}
+
+  

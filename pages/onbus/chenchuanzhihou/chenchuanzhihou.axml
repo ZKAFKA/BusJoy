@@ -1,0 +1,6 @@
+<image style="width:100%;height:5000rpx"mode="scaleToFill" src="article.jpg"/>
+<cover-view class="read-button">
+  <image style="margin:22rpx;width:50rpx;height:50rpx" mode="scaleToFill" src="read.png"/>
+</cover-view>
+
+<!-- <image mode="scaleToFill" src="sound.jpg"/> -->

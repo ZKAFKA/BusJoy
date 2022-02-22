@@ -1,0 +1,184 @@
+<view>
+  <image class="camera" mode="scaleToFill" src="camera.png"/>
+  <image class="search" mode="scaleToFill" src="search.png"/>
+  <tabs tabBarCls="tab-head" tabs="{{tabs}}" tabsName="activeTab" onTabClick="handleTabClick" onChange="handleTabChange" onPlusClick="handlePlusClick" activeTab="{{activeTab}}" swipeable="{{false}}" tabBarUnderlineWidth="20px" stickyBar="{{true}}">
+    <!-- 关注内容 -->
+    <tab-content>
+      <view class="card">
+        <view class="person">
+        <image mode="scaleToFill" class="person-img" src="bus.png"></image>
+        <text class="person-name">19路公交车</text>
+        <text class="person-note" style="color:#f1da09ef">官方账号</text><image class="identify" mode="scaleToFill" src="identify.png"/>
+        <image class="more" mode="scaleToFill" src="more.png"/>
+        </view>
+        <view class="line"/>
+        <view class="content">
+          通知：
+  将从10月20日起实行冬季通车安排，
+  通行时间将由原 6:30~21:30(间隔15分钟发车)改为 
+
+  7:00 ~ 20:00(间隔15分钟发车)。
+  
+  望各位乘客周知。
+        </view>
+        <view class="topic">
+          <text class="topic-text">#官方通知</text>
+        </view>
+        <view class="topic">
+          <text class="topic-text">#19路</text>
+        </view>
+
+        <view class="menu">
+          <image class="mark" mode="scaleToFill" src="like.png"/><text class="mark-text">655</text>
+          <image class="mark" mode="scaleToFill" src="comment.png"/><text class="mark-text">26</text>
+        </view>
+      </view>
+      <view class="card">
+        <view class="person">
+        <image mode="scaleToFill" class="person-img" src="bus.png"></image>
+        <text class="person-name">236M路公交车</text>
+        <text class="person-note" style="color:#f1da09ef">官方账号</text><image class="identify" mode="scaleToFill" src="identify.png"/>
+        <image class="more" mode="scaleToFill" src="more.png"/>
+        </view>
+        <view class="line"/>
+        <view class="content">
+          【失物招领】：
+  9月24日通行时间为14:30至16:00的236M路公交车上，检查车辆时捡到一张浙江省老年优待证，失主姓名为冯有财，望认识失主的亲们，赶快转告失主与公交305车队联系，联系电话：85041146。 ​​​​
+        <image mode="scaleToFill" src="失物招领.jpg"/>
+        </view>
+        <view class="topic">
+          <text class="topic-text">失物招领</text>
+        </view>
+        <view class="topic">
+          <text class="topic-text">#236M路</text>
+        </view>
+
+        <view class="menu">
+          <image class="mark" mode="scaleToFill" src="like.png"/><text class="mark-text">245</text>
+          <image class="mark" mode="scaleToFill" src="comment.png"/><text class="mark-text">48</text>
+        </view>
+      </view>
+      <view class="card">
+        <view class="person">
+        <image mode="scaleToFill" class="person-img" src="交警.jpeg"></image>
+        <text class="person-name">杭州交警</text>
+        <text class="person-note" style="color:#f1da09ef">官方账号</text><image class="identify" mode="scaleToFill" src="identify.png"/>
+        <image class="more" mode="scaleToFill" src="more.png"/>
+        </view>
+        <view class="line"/>
+        <view class="content">
+          【#公交司机小心捡起掉落路边的国旗#：我很骄傲我是中国人！】9月27日，河南郑州，公交司机杜师傅驾驶公交车时，突然看到路边有一红色物体，杜师傅下车一看，是不慎掉落的国旗。杜国权将国旗拾起，将上面的尘土拍打干净，并小心折叠好保存。杜师傅表示：“我很骄傲我是一个中国人，有五星红旗的地方就有信念的灯塔”  
+        </view>
+        <view class="topic">
+          <text class="topic-text">#表彰</text>
+        </view>
+
+        <view class="menu">
+          <image class="mark" mode="scaleToFill" src="like.png"/><text class="mark-text">1433</text>
+          <image class="mark" mode="scaleToFill" src="comment.png"/><text class="mark-text">126</text>
+        </view>
+      </view>
+      <view class="blank"/>
+      
+    </tab-content>
+
+    <!-- 推荐内容 -->
+    <tab-content>
+      <view class="card">
+        <view class="person">
+        <image mode="scaleToFill" class="person-img" src="头像1.jpg"></image>
+        <text class="person-name">熊小夕</text>
+        <text class="person-note">卡片收集狂</text>
+        <image class="more" mode="scaleToFill" src="more.png"/>
+        </view>
+        <view class="line"/>
+        <view class="content">
+          帮闺蜜捞一下！今天大概下午4点左右193路公交车上穿白衬衫黑裤子背黑色挎包的小哥哥！闺蜜胆子太小了一直不敢上去要微信！
+        </view>
+        <view class="topic">
+          <text class="topic-text">#海底捞</text>
+        </view>
+        <view class="topic">
+          <text class="topic-text">#193路</text>
+        </view>
+
+        <view class="menu">
+          <image class="mark" mode="scaleToFill" src="like.png"/><text class="mark-text">15</text>
+          <image class="mark" mode="scaleToFill" src="comment.png"/><text class="mark-text">3</text>
+        </view>
+      </view>
+      <view class="card">
+        <view class="person">
+        <image mode="scaleToFill" class="person-img" src="头像2.jpg"></image>
+        <text class="person-name">我睡不醒啊</text>
+        <text class="person-note">文艺青年</text>
+        <image class="more" mode="scaleToFill" src="more.png"/>
+        </view>
+        <view class="line"/>
+        <view class="content">
+          【失物招领】
+  今天在526路开往午潮山公交站方向下午两点半左右经过西溪印象城的公交车上，捡到了一个AirPods Pro，失主可以与我私聊联系啊。
+        <image mode="scaleToFill" src="失物招领2.png"/>
+        </view>
+        <view class="topic">
+          <text class="topic-text">#失物招领</text>
+        </view>
+        <view class="topic">
+          <text class="topic-text">#526路</text>
+        </view>
+
+        <view class="menu">
+          <image class="mark" mode="scaleToFill" src="like.png"/><text class="mark-text">55</text>
+          <image class="mark" mode="scaleToFill" src="comment.png"/><text class="mark-text">2</text>
+        </view>
+      </view>
+      <view class="card">
+        <view class="person">
+        <image mode="scaleToFill" class="person-img" src="头像3.jpg"></image>
+        <text class="person-name">独爱冰可乐</text>
+        <text class="person-note">萌新</text>
+        <image class="more" mode="scaleToFill" src="more.png"/>
+        </view>
+        <view class="line"/>
+        <view class="content">
+          西溪印象城附近有什么适合多人娱乐的玩的啊，求推荐。。。(除了密室逃脱和鬼屋！！！！)
+        </view>
+        <view class="topic">
+          <text class="topic-text">#推荐</text>
+        </view>
+
+        <view class="menu">
+          <image class="mark" mode="scaleToFill" src="like.png"/><text class="mark-text">32</text>
+          <image class="mark" mode="scaleToFill" src="comment.png"/><text class="mark-text">14</text>
+        </view>
+      </view>
+      <view class="card">
+        <view class="person">
+        <image mode="scaleToFill" class="person-img"></image>
+        <text class="person-name">不秃头的程序员</text>
+        <text class="person-note">摄影爱好者</text>
+        <image class="more" mode="scaleToFill" src="more.png"/>
+        </view>
+        <view class="line"/>
+        <view class="content">
+          
+        </view>
+        <view class="topic">
+          <text class="topic-text">#海底捞</text>
+        </view>
+        <view class="topic">
+          <text class="topic-text">#193路</text>
+        </view>
+
+        <view class="menu">
+          <image class="mark" mode="scaleToFill" src="like.png"/><text class="mark-text">15</text>
+          <image class="mark" mode="scaleToFill" src="comment.png"/><text class="mark-text">3</text>
+        </view>
+      </view>
+    
+    </tab-content>
+  </tabs>
+
+
+  <tabbar class="tab" idx="0" hid="{{tabbarHidden}}"></tabbar>
+</view>

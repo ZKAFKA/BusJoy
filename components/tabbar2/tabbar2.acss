@@ -1,0 +1,40 @@
+.mapTabbar {
+    width: 100%;
+    height: 100rpx;
+    position: fixed;
+    color: #1678ff;
+    background: white;
+    z-index: 1000;
+    /* border-top: 2rpx solid #eee; */
+}
+.newsOption,.mapOption{
+ font-size: 28rpx;
+}
+.cont {
+    padding: 0;
+    z-index: 0;
+    height: calc(100rpx + env(safe-area-inset-bottom) / 2);
+    padding-bottom: calc(env(safe-area-inset-bottom) / 2);
+    display: flex;
+}
+
+.cont .item {
+    font-size: 18rpx;
+    flex: 1;
+    text-align: center;
+    height: 100%;
+    background-color: inherit;
+    overflow: initial;
+    justify-content: center;
+    align-items: center;
+}
+.tabtip{
+  width: 50rpx;
+  background-color: #1678ff;
+  height: 10rpx;
+  z-index: 20;
+  position: relative;
+  top:80rpx;
+  border-radius:25rpx;
+  left:-25%;
+}

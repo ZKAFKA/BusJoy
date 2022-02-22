@@ -1,0 +1,10 @@
+<view class="mapTabbar">
+  <view class="cont">
+    <block a:for="{{tabBar}}" a:for-item="item" a:key="tabBar">
+      <view class="item" onTap="goToTab" data-url="{{item.pagePath}}" data-index="{{index}}">
+        <view class="{{idx == index ? 'newsOption' : 'mapOption'}}" style="position:relative; height:28rpx;top:36rpx;">{{item.text}}</view>
+      </view>
+      <view class="tabtip"style="opacity:{{idx == index ? 1:0}}"></view>
+    </block>
+  </view>
+</view>

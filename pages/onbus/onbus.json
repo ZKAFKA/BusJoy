@@ -1,0 +1,17 @@
+{
+  "usingComponents": {
+    "searchbar":"/components/searchbar/searchbar",
+    "collapse-item":"/components/searchbar/collapse-item/index",
+    "tabbar":"/components/tabbar/tabbar",
+    "list": "mini-ali-ui/es/list/index",
+    "list-item": "mini-ali-ui/es/list/list-item/index",
+    "card": "/components/card/card",
+    "station":"/components/station/station",
+    "tabs": "/components/mytab/mytab",
+    "tab-content": "/components/mytab/mytab-content/mytab-content",
+    "newsinfo":"/components/newsinfo/newsinfo",
+    "collapse": "mini-ali-ui/es/collapse/index",
+    "collapse-item2": "mini-ali-ui/es/collapse/collapse-item/index",
+    "tips-dialog": "mini-ali-ui/es/tips/tips-dialog/index"
+  }
+}

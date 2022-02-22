@@ -1,0 +1,8 @@
+{
+  "usingComponents":{
+    "tabbar":"/components/tabbar/tabbar",
+    "tabs": "/components/mytab/mytab",
+    "tab-content": "/components/mytab/mytab-content/mytab-content",
+    "search-bar": "mini-ali-ui/es/search-bar/index"
+  }
+}

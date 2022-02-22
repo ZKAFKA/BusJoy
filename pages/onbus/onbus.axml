@@ -1,0 +1,254 @@
+<view>
+  <tips-dialog
+   type="rectangle"
+   className="rectangle"
+   onCloseTap="onDialogTap"
+   show="{{showDialog}}">
+   <view class="tips" style="color:white;" slot="content">
+     把“城市服务”添加到首页
+   </view>
+   <view slot="operation" class="add-home" onTap="onDialogTap" style="color:white;">不再提醒</view>
+ </tips-dialog>
+  <image class="qr" mode="scaleToFill" src="qr.png" onTap="scanQR"/>
+  <image class="ar" mode="scaleToFill" src="ar.png" onTap="listenMusic"/>
+  <tabs tabBarCls="tab-head" tabs="{{tabs}}" tabsName="activeTab" onTabClick="handleTabClick" onChange="handleTabChange" onPlusClick="handlePlusClick" activeTab="{{activeTab}}" swipeable="{{false}}" tabBarUnderlineWidth="20px" stickyBar="{{true}}">
+  
+  <tab-content>
+    <scroll-view scroll-y="{{true}}" style="height:1300rpx;">
+        <card id="n1">
+          <newsinfo dataSource="{{newscontent[0]}}"></newsinfo>
+        </card>
+        <card id="n2">
+          <newsinfo dataSource="{{newscontent[1]}}"></newsinfo>
+        </card>
+        <card id="n3">
+          <newsinfo dataSource="{{newscontent[1]}}"></newsinfo>
+        </card>
+        <card id="n4">
+          <newsinfo dataSource="{{newscontent[1]}}"></newsinfo>
+        </card>
+        <card id="n5">
+          <newsinfo dataSource="{{newscontent[1]}}"></newsinfo>
+        </card>
+      </scroll-view>
+  </tab-content>
+
+  <tab-content> 
+  <movable-area class="area">
+    <view class="mapview" style="width: 98%; height:1500rpx;left:1%">
+      <map id="busmap" longitude="{{mapData.longitude}}" latitude="{{mapData.longitude}}" 
+      scale="{{mapData.scale}}" controls="{{mapData.controls}}" onControlTap="controltap"
+       markers="{{mapData.markers}}" onMarkerTap="showModal" polyline="{{mapData.polyline}}" 
+       circles="{{mapData.circles}}" panels="{{mapData.panels}}" enable-zoom="{{mapData.enablezoom}}" 
+       optimize="{{mapData.optimize}}" onTap="tap" onPanelTap="onPanelTap" style="width: 100%; 
+       height:600px;left:1%" onCalloutTap="calloutTap" include-points="{{mapData.includePoints}}"
+        show-location="{{mapData.showlocation}}" setting="{{mapData.setting}}"></map>
+        
+      <cover-view a:if="{{showModalStatus}}" class="mask_screen" onTap="hideModal"></cover-view>
+      <!-- 弹出框 -->
+      <cover-view animation="{{windowAnimation}}" a:if="{{showModalStatus}}" class="window_box">
+        <cover-view class="placeBox">
+          <cover-view class="placeView">
+            <cover-view class="viewTitle">{{advData.title}}</cover-view>
+            <cover-view class="viewAddr">{{advData.address}}</cover-view>
+            <cover-view style="display:flex;font-size:11">
+              <cover-view>评分：{{advData.score}}</cover-view>
+              <cover-view style="margin-left:10">人均：{{advData.perspend}}元/人</cover-view>
+            </cover-view>
+          </cover-view>
+          <cover-view class="viewIcon">
+            <cover-view class="icon-box">
+              <cover-image class="indexIcon" src="/assets/gothere.png"></cover-image>
+              <cover-view class="iconDescribe">去这里</cover-view>
+            </cover-view>
+            <cover-view class="icon-box">
+              <cover-image class="indexIcon" src="/assets/phone.png" bindtap="calling"></cover-image>
+              <cover-view class="iconDescribe">电话</cover-view>
+            </cover-view>
+            <cover-view class="icon-box">
+              <cover-image a:if="{{advData.hadMark==true}}" class="indexIcon" src="/assets/star-full.png" onTap="shopcancel"></cover-image>
+              <cover-image a:else class="indexIcon" src="/assets/star.png" onTap="shopcollect"></cover-image>
+              <cover-view class="iconDescribe">收藏</cover-view>
+            </cover-view>
+          </cover-view>
+          <cover-view style="margin-top:20rpx;">
+            <swiper class="swiper" style="border-radius: 15rpx;" previousMargin="0px" nextMargin="0px" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+              <swiper-item a:for="{{advData.swiper.slides}}" key="swiper-item-{{index}}">
+                <image class="swiper-item" mode="aspectFill" src="{{item}}"></image>
+              </swiper-item>
+            </swiper>
+          </cover-view>
+          <cover-view class="moreinfo">>>查看更多优惠信息</cover-view>
+        </cover-view>
+      </cover-view> 
+      
+    </view>
+
+
+          <cover-view class="cover-view2" onTap="hideDes" style="position:absolute; top:{{y+155}}px; margin-left:{{x+50}}px;" a:if="{{ringHidden}}"><image class="close-mask2" src="/assets/in-card/close.png" ></image></cover-view>
+          <cover-view style="position:absolute; top:{{y}}px; margin-left:{{x}}px;" direction="all">
+            <cover-view a:if="{{ringHidden}}">
+              <cover-view class="text-wrapperli">
+                  <collapse
+                    className="demo-collapse"
+                    collapseKey="collapse2"
+                    activeKey="{{['item-22']}}"
+                    onChange="onChange"
+                    accordion="{{true}}"
+                  >
+                    <block a:for="{{stationonbus}}">
+                      <collapse-item2 header="{{item}}"  collapseKey="collapse2" showArrow="{{false}}" className="textcontent">
+                        <cover-view class="item-content">
+                            <view>设为目标站</view>
+                        </cover-view>
+                      </collapse-item2>
+                    </block>
+                  </collapse>
+              </cover-view>
+            </cover-view>
+          </cover-view>
+          
+          <movable-view class="ring-wrapper" direction="all" onTap="showDes" onTouchMove="moveTab">
+            <image class="Ring" mode="aspectFit" src="ring.png" id="img"/>
+          </movable-view>
+
+    </movable-area>
+  </tab-content>
+  </tabs>
+    
+</view>
+
+<view>
+  <searchbar className="search-bar"
+  collapseKey="searchcontent"
+  activeKey="1"
+  onChange="onChange">
+    <collapse-item collapseKey="searchcontent" showArrow="{{false}}">
+    <scroll-view class="search-content" scroll-y="{{true}}">
+      <image class="search-record" mode="scaleToFill" src="附近.jpg"/>
+      
+      <view class="bottom-text">--- 没有更多记录了哦 ---</view>
+    </scroll-view>
+  </collapse-item>
+  </searchbar>
+</view>
+
+
+<view class="mask" hidden="{{showMask}}">
+  <view class="AdView-mask front" animation="{{animationMain}}" onTap="rotateFn" data-id="1">
+    <image class="mask-img" mode="aspectFill" src="first.jpg"></image>
+      <view class="over-view">
+        <view class="date" style="display:flex;">
+          <view style="font-size:45px; margin-left:20rpx;">12</view>
+          <view style="white-space:pre-wrap;font-size:9px;margin-left:15rpx;margin-top:8rpx">
+2021年10月
+辛丑年 
+九月初七
+[ 星期二 ]
+          </view>
+        </view>
+      </view>
+      <view class="excerpt">
+        <view class="title" space="nbsp" style="color:black;margin-top:120rpx;text-align:center;color:black;font-family:serif;font-size:25px;padding-left:20px;padding-right:20px" >
+          我们应该振作起来，去追求秋天吧。
+        </view>
+        <view class="sentence" space="nbsp" style="text-align:center;margin-top:60rpx;color:#616161;top:100rpx; white-space:pre-wrap;font-size:12px;">
+沉睡会与消亡一起 
+
+直到万物寂静和桥下 
+
+穿梭而过的雨衣，它走在记忆的边界 
+
+记忆的边界是溶解
+        </view>
+        <view class="line" style="margin-top:70rpx;margin-left:220rpx; width:150rpx;border-bottom:2rpx solid #cfcfcf"/>
+        <view class="more" style="margin-top:20rpx;color:#a09e9e;text-align:center;font-size:10px" catchTap="onMoreRead">点击阅读胡波《沉船之后》</view>
+      </view>
+  </view>
+  <view class="AdView-mask back" animation="{{animationBack}}" onTap="rotateFn" data-id="2">
+    <image class="mask-img-back" mode="aspectFit" src="/assets/in-card/cardback.png" style="background-color: #fcccb5;"></image>
+    <view class="over-view" style="position:absolute;top:0rpx;width:100%;text-align:center;">
+      <view style="margin-top:220rpx;font-size:15px;color:#999999;">恭喜获得金币</view>
+      <view style="margin-top:10rpx;font-size:40px;color:#fa201d">200</view>
+      <view style="margin-top:22rpx;font-size:10px;color:#c57820">可以兑换商家券和通用红包</view>
+      <view style="margin-top:118rpx;font-size:20px;color:#bf3a08" catchTap="toOpenMember">立即领取</view>
+      <view style="margin-top:56rpx;font-size:20px;color:#fddab5" catchTap="toOpenMember">分享获取更多金币</view>
+    </view>
+  </view>
+  <view>
+    <image class="close-mask" onTap="hiddenMask" src="/assets/in-card/close.png" hidden="{{hid}}"></image>
+  </view>
+</view> 
+
+
+<view class="mask" hidden="{{showMusic}}">
+  <view class="card-warrper {{swiperIndex == 1 ? 'active' : ''}}">
+  <view class="Lyric-mask front"  key="card-1" animation="{{cards[1].animationMain}}" onTap='rotateFn' data-id="1" data-index="{{1}}">
+    <image class="music-img" mode="aspectFill" src="music1.jpg"></image>
+    <view class="over-view">
+      <view class="date" style="display:flex;">
+        <view style="font-size:45px; margin-left:20rpx;">25</view>
+        <view style="white-space:pre-wrap;font-size:9px;margin-left:15rpx;margin-top:8rpx">
+2020年12月
+庚子年 
+冬月十一
+[ 星期五 ]
+        </view>
+      </view>
+    </view>
+    <view class="excerpt">
+      <!-- 黑胶唱片部分 -->
+      <view class='level_1' style='width: {{ 240*0.9 }}px; height: {{ 240*0.9 }}px'>
+        <view class='level_2'>
+          <view class='level_3'>
+            <view class='level_3'>
+              <view class='level_3'>
+                <view class='level_3'>
+                  <view class='level_3'>
+                    <view class='level_3'>
+                      <view class='level_3'>
+                        <view class='level_3'>
+                          <view class='level_3'>
+                            <view class='level_3'>
+                              <view class='level_3'>
+                                <view class='level_3'>
+                                  <view class='level_3 level_4'>
+                                    <view class='level_3 level_5'>
+                                      <image src='record.jpg'></image>
+                                    </view>
+                                  </view>
+                                </view>
+                              </view>
+                            </view>
+                          </view>
+                        </view>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    <view class="lyric" style="margin-top:0rpx; text-shadow: 1rpx 1rpx 1rpx #3d3b3b;width:600rpx;color:#8b8b8b;white-space:pre-wrap;font-size:12px;text-align:center">
+Merry merry Christmas
+Lonely lonely Christmas
+人浪中想真心告白
+但你只想听听笑话
+    </view>
+    <view class="line" style="margin-top:20rpx;margin-left:220rpx; width:150rpx;border-bottom:2rpx solid #b1adad; box-shadow:1rpx #3d3b3b"/>
+    <view class="more" style="margin-top:10rpx;color:#8b8b8b;text-shadow: 1rpx 1rpx 1rpx #3d3b3b;text-align:center;font-size:9px" catchTap="onMoreRead">Lonely Christmas · 陈奕迅</view>
+    </view>
+  </view>
+  <view class="AdView-mask back" ey="card-1" animation="{{cards[1].animationBack}}"  onTap='rotateFn' data-id="2" data-index="{{1}}">
+    <image class="mask-img-back" mode="aspectFill" src="music3.jpg" style="background-color: #fcccb5;"></image>
+    <image mode="scaleToFill" style="height:40rpx;width:40rpx;position:absolute;right:20rpx;top:20rpx" src="more.png"/>
+    <view class="over-view" style="position:absolute;top:0rpx;width:100%;">
+    </view>
+  </view>
+</view>
+
+
+
+</view>

@@ -1,0 +1,8 @@
+<box height='80' width='40'>
+	<image width='40' height='40' src='/assets/playmark.png'/>
+	<text text='X${count}' color='#FFFFFF' font-size='8' background-color='#FF0000' 
+        border-radius='6' padding-left='3' padding-right='3' right='0'/>
+  <view style="width:100%;top:40;position:absolute;">
+  <text text='${title}' width='40' color="white" font-size='10' style="background-color:#82ac26;border-radius:6;text-align:center;"/>
+  </view>
+</box>

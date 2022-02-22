@@ -1,0 +1,15 @@
+<!-- layout/marker_customcallout.xml-->
+<box layout='vertical' background-color='${bgColor}'>
+  <text text='${title}' font-size='16' color='#FFFFFF'/>
+  <box layout='horizontal'>
+    <text id='dh' clickable='true' text='导航' color='#FFFFFF' 
+          padding-left='8' padding-right='8' font-size='16' 
+          border-radius='6' background-color='#1591CF'/>
+    <text id='xc' clickable='true' text='相册' color='#FFFFFF' 
+          padding-left='8' padding-right='8' font-size='16' 
+          border-radius='6' background-color='#1591CF'/>
+    <text id='wxt' clickable='true' text='卫星图' color='#FFFFFF' 
+          padding-left='8' padding-right='8' font-size='16'
+          border-radius='6' background-color='#1591CF'/>
+  </box>
+</box>

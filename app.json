@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/onbus/onbus",
+    "pages/my/my",
+    "pages/square/square",
+    "pages/my/signin/signin",
+    "pages/my/record/record",
+    "pages/my/discount/discount",
+    "pages/my/rank/rank",
+    "pages/my/friendcircle/friendcircle",
+    "pages/cardbag/cardbag",
+    "pages/cardbag/chenchuanzhihou/chenchuanzhihou",
+    "pages/onbus/chenchuanzhihou/chenchuanzhihou"
+  ],
+  "window": {
+    "defaultTitle": "Bus Joy"
+  },
+  "tabBar": {
+    "textColor": "#333",
+    "selectedColor": "#49a9ee",
+    "backgroundColor": "#ffffff",
+    "items": [
+      {
+        "pagePath": "pages/square/square",
+        "name": "动态",
+        "icon": "assets/square.png",
+        "activeIcon": "assets/square-a.png"
+      },
+      {
+        "pagePath": "pages/onbus/onbus",
+        "name": "乘车",
+        "icon": "assets/bus.png",
+        "activeIcon": "assets/bus-a.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "name": "个人中心",
+        "icon": "assets/my.png",
+        "activeIcon": "assets/my-a.png"
+      }
+    ]
+  }
+}

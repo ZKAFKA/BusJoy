@@ -1,0 +1,223 @@
+<view class="blank"/>
+  <view>
+    <swiper class="swiper" previousMargin="33rpx" nextMargin="31rpx" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" acceleration=true swipe-ratio=3.0 swipe-speed=0.5 onChange="swiperChange">
+        <!-- <swiper-item a:for="{{letter}}" key="swiper-item-{{index}}"> -->
+
+<swiper-item key="swiper-item-{{0}}">
+  <view class="card-warrper {{swiperIndex == 0 ? 'active' : ''}}">
+    <view class="AdView-mask front"  key="card-0" animation="{{cards[0].animationMain}}" onTap='rotateFn' data-id="1" data-index="{{0}}">
+      <image class="mask-img" mode="aspectFill" src="article.jpg"></image>
+      <view class="over-view">
+        <view class="date" style="display:flex;">
+          <view style="font-size:45px; margin-left:20rpx;">12</view>
+          <view style="white-space:pre-wrap;font-size:9px;margin-left:15rpx;margin-top:8rpx">
+2021年10月
+辛丑年 
+九月初七
+[ 星期二 ]
+          </view>
+        </view>
+      </view>
+      <view class="excerpt">
+        <view class="title" space="nbsp" style="color:black;margin-top:120rpx;text-align:center;color:black;font-family:serif;font-size:25px;padding-left:20px;padding-right:20px" >
+          我们应该振作起来，去追求秋天吧。
+        </view>
+        <view class="sentence" space="nbsp" style="text-align:center;margin-top:60rpx;color:#616161;top:100rpx; white-space:pre-wrap;font-size:12px;">
+沉睡会与消亡一起 
+
+直到万物寂静和桥下 
+
+穿梭而过的雨衣，它走在记忆的边界 
+
+记忆的边界是溶解
+        </view>
+        <view class="line" style="margin-top:70rpx;margin-left:220rpx; width:150rpx;border-bottom:2rpx solid #cfcfcf"/>
+        <view class="more" style="margin-top:20rpx;color:#a09e9e;text-align:center;font-size:10px" catchTap="onMoreRead">点击阅读胡波《沉船之后》</view>
+      </view>
+    </view>
+    <view class="AdView-mask back" ey="card-0" animation="{{cards[0].animationBack}}"  onTap='rotateFn' data-id="2" data-index="{{0}}">
+      <image class="mask-img-back" mode="aspectFill" src="图片1.jpg" style="background-color: #fcccb5;"></image>
+      <image mode="scaleToFill" style="height:40rpx;width:40rpx;position:absolute;right:20rpx;top:20rpx" src="more.png"/>
+      <view class="over-view" style="position:absolute;top:0rpx;width:100%;">
+      </view>
+    </view>
+  </view>
+</swiper-item>
+
+
+<swiper-item key="swiper-item-{{1}}">
+  <view class="card-warrper {{swiperIndex == 1 ? 'active' : ''}}">
+    <view class="Lyric-mask front"  key="card-1" animation="{{cards[1].animationMain}}" onTap='rotateFn' data-id="1" data-index="{{1}}">
+      <image class="music-img" mode="aspectFill" src="music1.jpg"></image>
+      <view class="over-view">
+        <view class="date" style="display:flex;">
+          <view style="font-size:45px; margin-left:20rpx;">25</view>
+          <view style="white-space:pre-wrap;font-size:9px;margin-left:15rpx;margin-top:8rpx">
+2020年12月
+庚子年 
+冬月十一
+[ 星期五 ]
+          </view>
+        </view>
+      </view>
+      <view class="excerpt">
+        <!-- 黑胶唱片部分 -->
+        <view class='level_1' style='width: {{ 240*0.9 }}px; height: {{ 240*0.9 }}px'>
+          <view class='level_2'>
+            <view class='level_3'>
+              <view class='level_3'>
+                <view class='level_3'>
+                  <view class='level_3'>
+                    <view class='level_3'>
+                      <view class='level_3'>
+                        <view class='level_3'>
+                          <view class='level_3'>
+                            <view class='level_3'>
+                              <view class='level_3'>
+                                <view class='level_3'>
+                                  <view class='level_3'>
+                                    <view class='level_3 level_4'>
+                                      <view class='level_3 level_5'>
+                                        <image src='record.jpg'></image>
+                                      </view>
+                                    </view>
+                                  </view>
+                                </view>
+                              </view>
+                            </view>
+                          </view>
+                        </view>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      <view class="lyric" style="margin-top:0rpx; text-shadow: 1rpx 1rpx 1rpx #3d3b3b;width:600rpx;color:#8b8b8b;white-space:pre-wrap;font-size:12px;text-align:center">
+Merry merry Christmas
+Lonely lonely Christmas
+人浪中想真心告白
+但你只想听听笑话
+      </view>
+      <view class="line" style="margin-top:20rpx;margin-left:220rpx; width:150rpx;border-bottom:2rpx solid #b1adad; box-shadow:1rpx #3d3b3b"/>
+      <view class="more" style="margin-top:10rpx;color:#8b8b8b;text-shadow: 1rpx 1rpx 1rpx #3d3b3b;text-align:center;font-size:9px" catchTap="onMoreRead">Lonely Christmas · 陈奕迅</view>
+      </view>
+    </view>
+    <view class="AdView-mask back" ey="card-1" animation="{{cards[1].animationBack}}"  onTap='rotateFn' data-id="2" data-index="{{1}}">
+      <image class="mask-img-back" mode="aspectFill" src="music3.jpg" style="background-color: #fcccb5;"></image>
+      <image mode="scaleToFill" style="height:40rpx;width:40rpx;position:absolute;right:20rpx;top:20rpx" src="more.png"/>
+      <view class="over-view" style="position:absolute;top:0rpx;width:100%;">
+      </view>
+    </view>
+  </view>
+</swiper-item>
+
+<swiper-item key="swiper-item-{{2}}">
+  <view class="card-warrper {{swiperIndex == 2 ? 'active' : ''}}">
+    <view class="AdView-mask front"  key="card-2" animation="{{cards[2].animationMain}}" onTap='rotateFn' data-id="1" data-index="{{2}}">
+      <image class="photo-img" mode="aspectFill" src="photo.jpg"></image>
+      <view class="over-view">
+        <view class="date" style="display:flex;">
+          <view style="font-size:45px; margin-left:20rpx;">20</view>
+          <view style="white-space:pre-wrap;font-size:9px;margin-left:15rpx;margin-top:8rpx">
+2021年10月
+辛丑年 
+九月十五
+[ 星期三 ]
+          </view>
+        </view>
+      </view>
+      <view class="photo-text">
+        <view class="pger" style="margin-top:10rpx;color:#a09e9e;text-align:center;font-size:11px;font-family:cursive">
+        摄影 | Amel Majanovic
+        </view>
+        <view class="sentence" space="nbsp" style="line-height:20px;text-align:left;margin-top:60rpx;margin-left:45rpx;margin-right:45rpx;color:#525252;top:100rpx; white-space:pre-wrap;font-size:12px;">
+过去的事永远映照在两面镜子上，一面是明镜，映照已说过的话、已做过的事；一面是暗镜，映照许许多多未做的事或未说的话。
+        </view>
+        <view class="line" style="margin-top:170rpx;margin-left:220rpx; width:150rpx;border-bottom:2rpx solid #cfcfcf"/>
+        <view class="more" style="margin-top:15rpx;color:#a09e9e;text-align:center;font-size:10px" catchTap="onMoreRead">《项塔兰》</view>
+      </view>
+    </view>
+    <view class="AdView-mask back" ey="card-0" animation="{{cards[2].animationBack}}"  onTap='rotateFn' data-id="2" data-index="{{2}}">
+      <image class="photo-img-back" mode="aspectFill" src="photoback1.jpg" style="background-color: #fcccb5;"></image>
+      <image mode="scaleToFill" style="height:40rpx;width:40rpx;position:absolute;right:20rpx;top:20rpx" src="more.png"/>
+      <view class="over-view" style="position:absolute;top:0rpx;width:100%;">
+      </view>
+    </view>
+  </view>
+</swiper-item>
+<swiper-item key="swiper-item-{{3}}">
+  <view class="card-warrper {{swiperIndex == 3 ? 'active' : ''}}">
+    <view class="AdView-mask front"  key="card-3" animation="{{cards[3].animationMain}}" onTap='rotateFn' data-id="1" data-index="{{3}}">
+      <image class="music-img" mode="aspectFill" src="car.jpg"></image>
+      <view class="over-view">
+        <view class="date" style="display:flex;">
+          <view style="font-size:45px; margin-left:20rpx;">17</view>
+          <view style="white-space:pre-wrap;font-size:9px;margin-left:15rpx;margin-top:8rpx">
+2020年10月
+庚子年 
+九月十二
+[ 星期日 ]
+          </view>
+        </view>
+      </view>
+      <view class="excerpt">
+        <view style="margin-top:-30rpx;margin-left:15rpx">
+          <canvas onReady="onCanvasReady" id="canvas" type="webgl" width="300rpx" height="300rpx" data-name="bugatti"/>
+        </view>
+        <view class="line" style="margin-top:70rpx;margin-left:220rpx; width:150rpx;border-bottom:2rpx solid #cfcfcf"/>
+        <view class="more" style="margin-top:20rpx;color:#a09e9e;text-align:center;font-size:10px" catchTap="onMoreRead">bugatti</view>
+      </view>
+    </view>
+  </view>
+    <view class="AdView-mask back" ey="card-0" animation="{{cards[3].animationBack}}"  onTap='rotateFn' data-id="2" data-index="{{3}}">
+      <image class="mask-img-back" mode="aspectFill" src="car.jpg" style="background-color: #fcccb5;"></image>
+      <image mode="scaleToFill" style="height:40rpx;width:40rpx;position:absolute;right:20rpx;top:20rpx" src="more.png"/>
+      <view class="over-view" style="position:absolute;top:0rpx;width:100%;">
+      </view>
+    </view>
+</swiper-item>
+
+  </swiper>
+  </view>
+  <view class="cardbag" onTap="onTopBtnTap">
+      当前卡包：{{currentBag}}
+  </view>
+  <popup show="{{showPop}}" position="bottom" onClose="onPopupClose">
+    <view style="height: 200px; background: #fff; display: flex; justify-content: center; align-items: center;">
+      <scroll-view scroll-y="{{true}}" style="height: 200px;" onScrollToUpper="upper" onScrollToLower="lower" onScroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+        <list>
+          <view class="select-head"/>
+          <list-item className="list-item" thumb="http://thumb.link.png"
+          arrow="{{true}}"
+          onClick="onItemClick" data-id="0">
+          <text class="cardbag-name">全部卡片</text><text class="cards-number">&nbsp;&nbsp;(10)</text>
+          </list-item>
+          <list-item className="list-item" thumb="http://thumb.link.png"
+          arrow="{{true}}"
+          onClick="onItemClick" data-id="1">
+          <text class="cardbag-name">笔下风华</text><text class="cards-number">&nbsp;&nbsp;(4/20)</text>
+          </list-item>
+          <list-item className="list-item" thumb="http://thumb.link.png"
+          arrow="{{true}}"
+          onClick="onItemClick" data-id="2">
+          <text class="cardbag-name">定格时光</text><text class="cards-number">&nbsp;&nbsp;(6/15)</text>
+          </list-item>
+          <list-item className="list-item" thumb="http://thumb.link.png"
+          arrow="{{true}}"
+          onClick="onItemClick" data-id="3">
+          <text class="cardbag-name">人与自然</text><text class="cards-number">&nbsp;&nbsp;(0/20)</text>
+          </list-item>
+          <list-item className="list-item"
+          arrow="{{false}}"
+          onClick="newFloder">
+          <image class="add-floder" mode="scaleToFill" src="folder-add.svg"/>
+          </list-item>
+        </list>
+      </scroll-view>
+      
+  </view>
+ </popup>
+

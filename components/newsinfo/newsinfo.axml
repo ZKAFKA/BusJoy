@@ -1,0 +1,16 @@
+<view class="cardinfo">
+<view class="words">
+  <text>{{dataSource.text}}</text>
+</view>
+<view class="pictures" hidden="{{false}}" >
+  <image a:for="{{dataSource.imgArray}}" a:for-item="item" a:for-index="imgIndex" 
+  style="border-radius:{{imgIndex=='0'?'20rpx 0 0 20rpx':''}}{{imgIndex=='2'?'0 20rpx 20rpx 0':''}}" 
+  class="images"  onTap="onTap" mode="aspectFill" src="{{item.src}}" onError="imageError" onLoad="imageLoad" />
+</view>
+<view class="videos" hidden="{{false}}"></view>
+<view class="locateIcon" a:if="{{dataSource.type=='recommend'}}">
+  <button size="mini" type="primary">
+  <image src="/assets/location.png"/>
+  定位</button>
+</view>
+</view>

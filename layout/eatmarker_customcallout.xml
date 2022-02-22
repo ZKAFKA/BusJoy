@@ -1,0 +1,10 @@
+<!-- layout/marker_customcallout.xml-->
+<box layout='vertical' background-color='${bgColor}'>
+  <box layout='horizontal'>
+    <text id='name' text='${title}' font-size='16' color='#ff662a'/>
+    <text id='more' text='更多>>' font-size='14' color='#434343' padding-left='25' clickable='true'/>
+  </box>
+  <box layout='vertical'>
+     <image id='hb' width='120' height='80' src='/assets/redbag.gif'/>
+  </box>
+</box>

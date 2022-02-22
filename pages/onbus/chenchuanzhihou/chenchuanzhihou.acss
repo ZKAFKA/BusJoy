@@ -1,0 +1,11 @@
+.read-button{
+  position:absolute; 
+  top: 50%;
+  right: 10%;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius:90%;
+  background:rgb(255, 255, 255);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border: solid 1px rgb(231, 231, 231);
+}
